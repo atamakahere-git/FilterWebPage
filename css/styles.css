@@ -1,0 +1,50 @@
+*{
+  /*using border-box for better arrangements*/
+	box-sizing: border-box;
+}
+/*giving the body a nice tone*/
+body {
+		background: #30292F;
+    color : #4A589A;
+}
+/*setting up the header*/
+#head {
+  text-decoration: none;
+}
+
+.header {
+  font-size: 1.5em;
+  padding-left: 10px;
+  margin-left: 40px;
+  font-family: 'Metal Mania', cursive;
+}
+/*setting up the canvas below header*/
+.canvas {
+  border: 2px solid #5F5AA2;
+  width: 60%;
+  height: 500px;
+  margin-left: 50px;
+  float: left;
+}
+/*spreading content to max surface*/
+canvas {
+  height: 496px;
+  width: 100%
+}
+/*setting up tha buttons div on the right of canvas*/
+.buttons {
+  width: 30%;
+  float: left;
+  background: #5F5AA2;
+  height: 500px;
+  color: #CDCED2;
+}
+/*setting up buttons insite buttons div*/
+.button {
+  margin: 20px;
+}
+.filter {
+  float: left;
+  margin: 5px;
+  text-align: center;
+}
