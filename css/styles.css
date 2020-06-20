@@ -48,3 +48,11 @@ canvas {
   margin: 5px;
   text-align: center;
 }
+/*Setting up styling of other buttons */
+.other-button {
+margin-left:20px;
+}
+.other-button hr{
+	margin-left:0px;
+	margin-top:150px;
+}
