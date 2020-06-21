@@ -26,10 +26,15 @@
 	</div>
 	<div class="buttons">
 		<!-- Adjusting buttons inside buttons tab -->
-		<div class="button">
+		<div class="filter-button">
 			<span>Chose your Image file :<input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()" ></span>
-	
+
 			<hr>
+			<!-- Add filter buttons below -->
+			<!-- Template to add filter :
+					<span class="filter"> <input type="button"
+					 value="FilterName" onclick="Function in filter.js to Apply filter and show image to canvas"
+				 	</span>-->
 			<span class="filter">  <input type="button" value="Grayscale" onclick="makeGray()" ></span>
 			<span class="filter">  <input type="button" value="Reddish   "onclick="makeRed()" ></span>
 			<span class="filter">  <input type="button" value="Greeenify" onclick="makeGreen()" ></span>
@@ -40,10 +45,11 @@
 			<span class="filter">  <input type="button" value="Make Dull" onclick="makeDull()" ></span>
 			<span class="filter">  <input type="button" value="Make Bright" onclick="makeBright()" ></span>
 			<span class="filter">  <input type="button" value="BlueRedRight" onclick="makediagRedBlue()"> </span>
+			<!-- To Do , Add digonal filter of all variants -->
 		</div>
 		<div class="other-button">
-		<hr>
-		<span class="filter">  <input type="button" value="Reset" onclick="showOriginal()" ></span>
+			<hr>
+			<span class="filter">  <input type="button" value="Reset" onclick="showOriginal()" ></span>
 			<span class="filter">  <input type="button" value="Apply filter over this image" onclick="makeChange()" ></span>
 			<span class="filter">  <input type="button" value="Save Image" onclick="download()" ></span>
 		</div>
