@@ -78,7 +78,7 @@ function makeBright() {
 	}
 	showFilter();
 }
-//Name is enought to tell you the function
+// gets to top and bottom color as argument and apply digonal filter
 function makediag (color1,color2) {
 	reset();
 	for (var pixel of backupImg.values()) {
