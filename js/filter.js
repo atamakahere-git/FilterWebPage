@@ -93,3 +93,4 @@ function makediagRedBlue () {
 	}
 	showFilter();
 }
+// Filter must be added here.
