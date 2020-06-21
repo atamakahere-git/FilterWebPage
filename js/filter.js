@@ -81,8 +81,6 @@ function makeBright() {
 //Name is enought to tell you the function
 function makediagRedBlue () {
 	reset();
-	var width = backupImg.getWidth();
-	var height = backupImg.getHeight();
 	for (var pixel of backupImg.values()) {
 		if (diagonalLeft(backupImg,pixel)) {
 			addColor(pixel,30,0,0);
@@ -92,4 +90,22 @@ function makediagRedBlue () {
 		}
 	}
 	showFilter();
+}
+function makediagRedGreen() {
+	reset();
+	for (var pixel of backupImg.values()) {
+		if (diagonalLeft(backupImg,pixel)) {
+			addColor(pixel,30,0,0);
+		}
+		else {
+			addColor(pixel,0,30,0);
+		}
+	}
+	showFilter();
+}
+function setColor1() {
+	alert("Success");
+}
+function setColor2() {
+	alert("Success");
 }

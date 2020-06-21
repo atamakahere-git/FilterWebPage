@@ -48,6 +48,9 @@ canvas {
   margin: 5px;
   text-align: center;
 }
+/*off-Copy */
+.colorselect {
+	margin: 5px;
 /*Setting up styling of other buttons */
 .other-button {
 margin-left:20px;
@@ -55,4 +58,5 @@ margin-left:20px;
 .other-button hr{
 	margin-left:0px;
 	margin-top:150px;
+  /* Harsh2110mishra */
 }

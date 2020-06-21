@@ -24,7 +24,8 @@
 		<!-- canvas div -->
 		<canvas id="canvas"></canvas>
 	</div>
-	<div class="buttons">
+	<div class="rightwindow">
+		<div class="buttons">
 		<!-- Adjusting buttons inside buttons tab -->
 		<div class="button">
 			<span>Chose your Image file : <input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()" ></span>
@@ -39,10 +40,29 @@
 			<span class="filter">  <input type="button" value="Make Dull" onclick="makeDull()" ></span>
 			<span class="filter">  <input type="button" value="Make Bright" onclick="makeBright()" ></span>
 			<span class="filter">  <input type="button" value="BlueRedRight" onclick="makediagRedBlue()"> </span>
-			<span class="filter">  <input type="button" value="Reset" onclick="showOriginal()" ></span>
-			<span class="filter">  <input type="button" value="Apply filter over this image" onclick="makeChange()" ></span>
-			<span class="filter">  <input type="button" value="Save Image" onclick="download()" ></span>
+			<span class="filter">  <input type="button" value="BlueGreenRight" onclick="makediagRedGreen()"> </span>
 		</div>
+		<fieldset class="colorselect">
+	 	<legend>Selecting Colors for diagonal filters</legend>
+	 	<p>
+			<label>First color</label>
+			<select onchange="setColor1()">
+				<option value = "Red">Red</option>
+				<option value = "Green">Green</option>
+				<option value = "Blue">Blue</option>
+			</select>
+			<label>Secound color</label>
+			<select onchange="setColor2()">
+				<option value = "Red">Red</option>
+				<option value = "Green">Green</option>
+				<option value = "Blue">Blue</option>
+			</select>
+	 	</p>
+	</fieldset>
+	<span class="filter">  <input type="button" value="Reset" onclick="showOriginal()" ></span>
+	<span class="filter">  <input type="button" value="Apply filter over this image" onclick="makeChange()" ></span>
+	<span class="filter">  <input type="button" value="Save Image" onclick="download()" ></span>
 	</div>
+</div>
 </body>
 </html>
