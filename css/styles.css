@@ -40,9 +40,11 @@ canvas {
   color: #CDCED2;
 }
 /*setting up buttons insite buttons div*/
-.button {
+.filter-button {
   margin: 20px;
+	float: left;
 }
+/* For each button  */
 .filter {
   float: left;
   margin: 5px;
@@ -51,8 +53,4 @@ canvas {
 /*Setting up styling of other buttons */
 .other-button {
 margin-left:20px;
-}
-.other-button hr{
-	margin-left:0px;
-	margin-top:150px;
 }
