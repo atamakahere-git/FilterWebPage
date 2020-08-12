@@ -78,18 +78,18 @@ function makeBright() {
 	}
 	showFilter();
 }
-//Name is enought to tell you the function
-function makediagRedBlue () {
+// gets to top and bottom color as argument and apply digonal filter
+function makediag (color1,color2) {
 	reset();
-	var width = backupImg.getWidth();
-	var height = backupImg.getHeight();
 	for (var pixel of backupImg.values()) {
 		if (diagonalLeft(backupImg,pixel)) {
-			addColor(pixel,30,0,0);
+			applyColor(color1,pixel);
 		}
 		else {
-			addColor(pixel,0,0,30);
+			applyColor(color2,pixel);
 		}
 	}
 	showFilter();
 }
+
+// Filter must be added here.

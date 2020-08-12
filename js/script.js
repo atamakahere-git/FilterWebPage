@@ -60,3 +60,9 @@ function diagonalLeft(image,pixel) {
 		return true;
 	}
 }
+//Aplying color
+function applyColor (color,pixel) {
+	if (color=='r'){addColor(pixel,30,0,0);}
+	if (color=='g'){addColor(pixel,0,30,0);}
+	if (color=='b'){addColor(pixel,0,0,30);}
+}
