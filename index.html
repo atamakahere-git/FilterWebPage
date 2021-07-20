@@ -11,23 +11,32 @@
 	<!-- Custom scripts -->
 	<script src="js/script.js"></script>
 	<script src="js/filter.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!-- SimpleImage Library from "https://www.dukelearntoprogram.com/" used for image manuplation-->
 	<script src="js/SimpleImage.js" >
 </script>
-	<!--
+
+		<!-- Loading Screen -->
+		<div id="ldr" class="loader-wrapper">
+			<span class="loader"><span class="loader-inner"></span></span>
+		</div>
+
+
+<!--
 	--Structure of HTML
 	--Header// -->
+
 	<div class="header"> <!-- Header division -->
-		<a id="head" href="index.html"><h1>Filter Paper</h1></a>
+		<a id="head" href="index.html"><h1>Le Filter Paper</h1></a>
 	</div>
 	<div class="canvas">
 		<!-- canvas div -->
 		<canvas id="canvas"></canvas>
 	</div>
-	<div class="buttons">
+	<div id="btns" class="buttons" >
 		<!-- Adjusting buttons inside buttons tab -->
 		<div class="filter-button">
-			<span>Chose your Image file :<input type="file" multiple="false" accept="image/*" id="finput" onchange="upload()" ></span>
+			<span > Upload your Image file :<input type="file" multiple="false" accept="image/*" style ="background-image: url('../FilterWebPage-master/imgs/FILTER\ PAPER.png');" id="finput" onchange="upload()" ></span>
 
 			<hr>
 			<!-- Add filter buttons below -->
@@ -35,29 +44,37 @@
 					<span class="filter"> <input type="button"
 					 value="FilterName" onclick="Function in filter.js to Apply filter and show image to canvas"
 				 	</span>-->
-			<span class="filter">  <input type="button" value="Grayscale" onclick="makeGray()" ></span>
-			<span class="filter">  <input type="button" value="Reddish   "onclick="makeRed()" ></span>
-			<span class="filter">  <input type="button" value="Greeenify" onclick="makeGreen()" ></span>
-			<span class="filter">  <input type="button" value="Bluish   " onclick="makeBlue()" ></span>
-			<span class="filter">  <input type="button" value="Aqua" onclick="makeAqua()" ></span>
-			<span class="filter">  <input type="button" value="Yellow" onclick="makeYellow()" ></span>
-			<span class="filter">  <input type="button" value="Magenta" onclick="makeMagenta()" ></span>
-			<span class="filter">  <input type="button" value="Make Dull" onclick="makeDull()" ></span>
-			<span class="filter">  <input type="button" value="Make Bright" onclick="makeBright()" ></span>
-			<span class="filter">  <input type="button" value="RedBlueRight" onclick="makediag('r','b')"> </span>
-			<span class="filter">  <input type="button" value="BlueGreenRight" onclick="makediag('b','g')"> </span>
-			<span class="filter">  <input type="button" value="GreenRedRight" onclick="makediag('g','r')"> </span>
-			<span class="filter">  <input type="button" value="BlueRedRight" onclick="makediag('b','r')"> </span>
-			<span class="filter">  <input type="button" value="GreenBlueRight" onclick="makediag('g','b')"> </span>
-			<span class="filter">  <input type="button" value="RedGreenRight" onclick="makediag('r','g')"> </span>
+			<span class="filter">  <input type="button" value="Grayscale" class="btn" onclick="makeGray()" ></span>
+			<span class="filter">  <input type="button" value="Reddish" class="btn" onclick="makeRed()" ></span>
+			<span class="filter">  <input type="button" value="Greeenify" class="btn" onclick="makeGreen()" ></span>
+			<span class="filter">  <input type="button" value="Bluish   " class="btn" onclick="makeBlue()" ></span>
+			<span class="filter">  <input type="button" value="Aqua" class="btn" onclick="makeAqua()" ></span>
+			<span class="filter">  <input type="button" value="Yellow" class="btn" onclick="makeYellow()" ></span>
+			<span class="filter">  <input type="button" value="Magenta" class="btn" onclick="makeMagenta()" ></span>
+			<span class="filter">  <input type="button" value="Make Dull" class="btn" onclick="makeDull()" ></span>
+			<span class="filter">  <input type="button" value="Make Bright" class="btn" onclick="makeBright()" ></span>
+			<span class="filter">  <input type="button" value="RedBlueRight" class="btn" onclick="makediag('r','b')"> </span>
+			<span class="filter">  <input type="button" value="BlueGreenRight" class="btn" onclick="makediag('b','g')"> </span>
+			<span class="filter">  <input type="button" value="GreenRedRight" class="btn" onclick="makediag('g','r')"> </span>
+			<span class="filter">  <input type="button" value="BlueRedRight" class="btn" onclick="makediag('b','r')"> </span>
+			<span class="filter">  <input type="button" value="GreenBlueRight" class="btn" onclick="makediag('g','b')"> </span>
+			<span class="filter">  <input type="button" value="RedGreenRight" class="btn" onclick="makediag('r','g')"> </span>
 
 			<!-- To Do , Add digonal filter of all variants -->
 		</div>
 		<div class="other-button">
 			<hr>
-			<span class="filter">  <input type="button" value="Reset" onclick="showOriginal()" ></span>
-			<span class="filter">  <input type="button" value="Apply filter over this image" onclick="makeChange()" ></span>
-			<span class="filter">  <input type="button" value="Save Image" onclick="download()" ></span>
+			<span class="filter">  <input type="button" class="btn" style="background-color: black;" value="Reset" onclick="showOriginal()" ></span>
+			<span class="filter">  <input type="button" class="btn"  style="background-color: black;" value="Apply filter over this image" onclick="makeChange()" ></span>
+			<span class="filter">  <input type="button" class="btn" style="background-color: black;" value="Save Image" onclick="download()" ></span>
+
+			
+<script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
 		</div>
 	</div>
 </body>
