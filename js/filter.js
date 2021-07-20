@@ -7,6 +7,8 @@ function addColor (pixel,r=0,g=0,b=0) {
 
 //function to make greyscale filter
 function makeGray() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'gray' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		var avg = (pixel.getRed()+pixel.getGreen()+pixel.getBlue())/3;
@@ -18,6 +20,8 @@ function makeGray() {
 }
 //function to make a red tone over image
 function makeRed() {
+	document.getElementById('btns').style.backgroundImage = '';
+	document.getElementById('btns').style.backgroundColor = 'maroon' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,30);
@@ -26,6 +30,8 @@ function makeRed() {
 }
 //function to make a green tone over image
 function makeGreen() {
+	document.getElementById('btns').style.backgroundImage = '';
+	document.getElementById('btns').style.backgroundColor = '#4caf50' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,0,30);
@@ -34,6 +40,8 @@ function makeGreen() {
 }
 //function to make a blue tone over image
 function makeBlue() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'powderblue' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,0,0,30);
@@ -42,6 +50,8 @@ function makeBlue() {
 }
 //Aqua tone
 function makeAqua() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'aqua' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,0,30,30);
@@ -49,6 +59,8 @@ function makeAqua() {
 	showFilter();
 }
 function makeYellow() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'yellow' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,30,30,0);
@@ -56,6 +68,8 @@ function makeYellow() {
 	showFilter();
 }
 function makeMagenta() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'magenta' ; 
 	reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,30,0,30);
@@ -64,6 +78,8 @@ function makeMagenta() {
 }
 //Reduce the brightness
 function makeDull() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'darkgray' ; 
 		reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,-30,-30,-30);
@@ -72,6 +88,8 @@ function makeDull() {
 }
 //Increase the brightness
 function makeBright() {
+	document.getElementById('btns').style.backgroundImage = '' ;
+	document.getElementById('btns').style.backgroundColor = 'white' ; 
 		reset();
 	for (var pixel of backupImg.values()) {
 		addColor(pixel,30,30,30);
@@ -80,6 +98,7 @@ function makeBright() {
 }
 // gets to top and bottom color as argument and apply digonal filter
 function makediag (color1,color2) {
+	document.getElementById('btns').style.backgroundImage = "url(../imgs/rgb.jpg)";
 	reset();
 	for (var pixel of backupImg.values()) {
 		if (diagonalLeft(backupImg,pixel)) {
