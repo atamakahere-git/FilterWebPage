@@ -4,12 +4,15 @@
 }
 /*giving the body a nice tone*/
 body {
-		background: #30292F;
-    color : #4A589A;
+		background:url(../imgs/background.jpg);
+    background-size: cover;
+   
 }
 /*setting up the header*/
 #head {
   text-decoration: none;
+  color : white;
+  text-shadow: 1px 1px black;
 }
 
 .header {
@@ -20,7 +23,11 @@ body {
 }
 /*setting up the canvas below header*/
 .canvas {
-  border: 2px solid #5F5AA2;
+  background:url('../imgs/FILTER\ PAPER.png');
+  background-position:inherit;
+  opacity: 1;
+  border: 2px solid whitesmoke;
+  border-radius: 10%;
   width: 60%;
   height: 500px;
   margin-left: 50px;
@@ -28,19 +35,55 @@ body {
 }
 /*spreading content to max surface*/
 canvas {
+  left:20%;
   height: 496px;
-  width: 100%
+  width:100%;
 }
 /*setting up tha buttons div on the right of canvas*/
 .buttons {
+  border-radius:10%;
+  text-decoration:none;
   width: 30%;
   float: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 1%;
   background: #5F5AA2;
-  height: 500px;
-  color: #CDCED2;
+  height: 505px;
+  color: white;
+  text-shadow: 1px 1px black;
 }
+
+.btn{
+  display: inline-block;
+  border-radius:3px;
+  border:none;
+  font-size: 20px;
+ width:auto;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ background:#4caf50;
+ color: whitesmoke;
+ transition: btn 2s;
+ box-shadow:1px 1px 3px black;
+}
+
+.btn:hover{
+  border-radius:10px;
+  width:auto;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background:whitesmoke;
+color:#4caf50;
+
+}
+
+
 /*setting up buttons insite buttons div*/
 .filter-button {
+
+  background-color: black;
+  padding:2rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 30px;
   margin: 20px;
 	float: left;
 }
@@ -53,4 +96,48 @@ canvas {
 /*Setting up styling of other buttons */
 .other-button {
 margin-left:20px;
+}
+
+/*added loaderscreen*/
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image:url(../imgs/background.jpg);
+  background-position: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
 }
