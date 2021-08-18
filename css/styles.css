@@ -51,7 +51,7 @@ canvas {
   height: 505px;
   color: white;
   text-shadow: 1px 1px black;
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
 }
 
